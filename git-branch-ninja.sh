@@ -19,7 +19,7 @@ fi
 
 case "$1" in
   -l)
-    echo "Listing branches..."
+    echo "Listing branches........."
     git branch
     ;;
 
