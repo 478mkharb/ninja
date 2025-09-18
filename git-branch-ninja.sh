@@ -54,6 +54,10 @@ case "$1" in
     git checkout "$branch1"
     git rebase "$branch2"
     ;;
+  -g)
+    echo "Showing branch commit graph "
+    git log --online --graph --decorate --all
+    ;;
 
   *)
     usage
