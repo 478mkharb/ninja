@@ -10,6 +10,7 @@ usage() {
   echo "  $0 -d <branch_name>"
   echo "  $0 -m -1 <branch1> -2 <branch2>   # merge branch1 into branch2"
   echo "  $0 -r -1 <branch1> -2 <branch2>   # rebase branch1 onto branch2"
+  echo "  $0 -g # graphical Branches"
   exit 1
 }
 
@@ -19,7 +20,7 @@ fi
 
 case "$1" in
   -l)
-    echo "Listing branches..."
+    echo "Listing branches........."
     git branch
     ;;
 
@@ -43,7 +44,7 @@ case "$1" in
     branch2=$5
     echo "Merging $branch1 into $branch2"
     git checkout "$branch2"
-    git merge --no-ff "$branch1" -m "Merge $branch1 into $branch2"
+    git merge --no-ff "$branch1" -m "Merge $branch1 ===>--- $branch2"
     ;;
 
   -r)

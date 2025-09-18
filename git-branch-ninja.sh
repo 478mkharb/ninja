@@ -10,6 +10,7 @@ usage() {
   echo "  $0 -d <branch_name>"
   echo "  $0 -m -1 <branch1> -2 <branch2>   # merge branch1 into branch2"
   echo "  $0 -r -1 <branch1> -2 <branch2>   # rebase branch1 onto branch2"
+  echo "  $0 -g # graphical Branches"
   exit 1
 }
 
@@ -54,6 +55,7 @@ case "$1" in
     git checkout "$branch1"
     git rebase "$branch2"
     ;;
+
   -g)
     echo "Showing branch commit graph "
     git log --online --graph --decorate --all
