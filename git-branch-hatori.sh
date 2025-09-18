@@ -55,6 +55,11 @@ case "$1" in
     git rebase "$branch2"
     ;;
 
+  -g)
+    echo "Showing branch commit graph "
+    git log --online --graph --decorate --all
+    ;;
+
   *)
     usage
     ;;
