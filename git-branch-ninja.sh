@@ -43,7 +43,7 @@ case "$1" in
     branch2=$5
     echo "Merging $branch1 into $branch2"
     git checkout "$branch2"
-    git merge --no-ff "$branch1" -m "Merge $branch1 into $branch2"
+    git merge --no-ff "$branch1" -m "Merge $branch1 ===>--- $branch2"
     ;;
 
   -r)
